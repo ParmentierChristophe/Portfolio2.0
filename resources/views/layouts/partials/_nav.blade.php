@@ -5,7 +5,9 @@
         </div>
         <div class="w3-col w3-padding-16 s8">
             <span>Welcome, <strong>Christophe</strong></span><br>
+
         </div>
+
     </div>
     <hr>
     <div class="w3-container">
@@ -15,4 +17,5 @@
     <a href="{{ url('/projets') }}" class=" w3-padding {{ (\Request::route()->getName() == 'projets.index') ? 'w3-theme-l1' : '' }}"><i class="fa fa-pencil  fa-fw"></i> Edition</a>
     <a href="{{ url('projets/create?') }}" class="w3-padding {{ (\Request::route()->getName() == 'projets.create') ? 'w3-theme-l1' : '' }}"><i class="fa fa-plus fa-fw"></i>  Ajouter un projet</a>
     <a href="#" class="w3-padding"><i class="fa fa-cog fa-fw"></i>  Options</a><br><br>
+
 </nav>

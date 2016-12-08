@@ -20,32 +20,32 @@
 
         </div>
         <div class="w3-padding-8">
-            {!! Form::textarea('contenu', null , ['class' =>'w3-input' ]) !!}
+            {!! Form::textarea('contenu', null , ['class' =>'w3-input', 'placeholder'=>'Contenu' ]) !!}
 
         </div>
     </div>
 
     <div class="w3-quarter w3-container">
         <div class="w3-container w3-padding-8">
-            {!! Form::text('titre', null , ['class' =>'w3-input w3-animate-input w3-margin-top' ]) !!}
+            {!! Form::text('titre', null , ['class' =>'w3-input w3-animate-input w3-margin-top', 'placeholder'=>'Titre' ]) !!}
         </div>
         <div class="w3-container w3-padding-8">
-            {!! Form::text('type', null , ['class' =>'w3-input w3-animate-input' ]) !!}
+            {!! Form::text('type', null , ['class' =>'w3-input w3-animate-input', 'placeholder'=>'Type' ]) !!}
         </div>
         <div class="w3-container w3-padding-8">
-            {!! Form::text('soustitre', null , ['class' =>'w3-input w3-animate-input' ]) !!}
+            {!! Form::text('soustitre', null , ['class' =>'w3-input w3-animate-input', 'placeholder'=>'Sous-titre' ]) !!}
         </div>
         <div class="w3-container w3-padding-8">
-            {!! Form::text('client', null , ['class' =>'w3-input w3-animate-input' ]) !!}
+            {!! Form::text('client', null , ['class' =>'w3-input w3-animate-input', 'placeholder'=>'Client' ]) !!}
         </div>
         <div class="w3-container w3-padding-8">
-            {!! Form::text('agence', null , ['class' =>'w3-input w3-animate-input' ]) !!}
+            {!! Form::text('agence', null , ['class' =>'w3-input w3-animate-input', 'placeholder'=>'Agence' ]) !!}
         </div>
         <div class="w3-container w3-padding-8">
-            {!! Form::text('typecrea', null , ['class' =>'w3-input w3-animate-input' ]) !!}
+            {!! Form::text('typecrea', null , ['class' =>'w3-input w3-animate-input', 'placeholder'=>'Type de creation' ]) !!}
         </div>
         <div class="w3-container w3-padding-8">
-            {!! Form::text('annee', null , ['class' =>'w3-input w3-animate-input' ]) !!}
+            {!! Form::text('annee', null , ['class' =>'w3-input w3-animate-input', 'placeholder'=>'Année' ]) !!}
         </div>
 
     </div>

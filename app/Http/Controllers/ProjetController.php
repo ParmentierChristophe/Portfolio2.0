@@ -10,6 +10,7 @@ use App\Http\Controllers\Controller;
 use Image;
 use App\Http\Requests;
 use Session;
+use File;
 
 class ProjetController extends Controller
 {
@@ -20,8 +21,17 @@ class ProjetController extends Controller
      */
     public function index()
     {
-        $projet = Projet::all();
-        return view('projets.index', compact('projet'));
+        if (\Auth::check())
+        {
+            $projet = Projet::all();
+            return view('projets.index', compact('projet'));
+        }
+        else
+        {
+            return view('auth.login');
+        }
+
+
     }
 
     /**
@@ -31,8 +41,14 @@ class ProjetController extends Controller
      */
     public function create()
     {
+        if (\Auth::check())
+        {
         return view('projets.create');
-
+        }
+        else
+        {
+            return view('auth.login');
+        }
     }
 
     /**
@@ -43,6 +59,8 @@ class ProjetController extends Controller
      */
     public function store(Request $requests)
     {
+        if (\Auth::check())
+        {
         $projet = new Projet;
 
         $projet->titre = $requests->titre;
@@ -122,6 +140,11 @@ class ProjetController extends Controller
             return view('projets.create');
 
         }
+        }
+        else
+        {
+            return view('auth.login');
+        }
     }
 
     /**
@@ -143,8 +166,14 @@ class ProjetController extends Controller
      */
     public function edit(Projet $projet)
     {
-
+        if (\Auth::check())
+        {
         return view('projets.edit',compact('projet') );
+        }
+        else
+        {
+            return view('auth.login');
+        }
     }
 
     /**
@@ -156,8 +185,15 @@ class ProjetController extends Controller
      */
     public function update(Request $request, Projet $projet)
     {
+        if (\Auth::check())
+        {
         $projet->update($request->all());
         return redirect()->route('projets.index');
+        }
+        else
+        {
+            return view('auth.login');
+        }
     }
 
     /**
@@ -168,7 +204,19 @@ class ProjetController extends Controller
      */
     public function destroy(Projet $projet)
     {
-        $projet->delete();
-        return redirect()->route('projets.index');
+        if (\Auth::check())
+        {
+
+                $projet->delete();
+                return redirect()->route('projets.index');
+
+            
+
+
+        }
+        else
+        {
+            return view('auth.login');
+        }
     }
 }

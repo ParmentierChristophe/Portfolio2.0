@@ -6,9 +6,6 @@
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3-theme-deep-orange.css">
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3-colors-highway.css">
-{{--
-{{ URL::asset('css/style.css') }}
---}}
 <link rel="stylesheet" href="{{ URL::asset('css/mystyle.css') }}">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -33,6 +30,7 @@
 
     <div class="w3-row-padding w3-margin-bottom">
         @yield('form')
+
     </div>
     <div class="w3-content">
         @include('layouts.partials._message')
@@ -40,6 +38,7 @@
     </div>
 
     <!-- Footer -->
+
     @include('layouts/partials/_footer')
 
     <!-- End page content -->
