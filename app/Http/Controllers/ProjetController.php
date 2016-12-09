@@ -155,7 +155,10 @@ class ProjetController extends Controller
      */
     public function show($id)
     {
-        //
+
+        $projet = Projet::findOrFail($id);
+        // this my route
+        return view('portfolio.projet')->with('projet',$projet);
     }
 
     /**
@@ -210,7 +213,7 @@ class ProjetController extends Controller
                 $projet->delete();
                 return redirect()->route('projets.index');
 
-            
+
 
 
         }

@@ -9,7 +9,7 @@
             <div class="h1"></div>
 
             <div class="h3 pp grid-item grid-item--height2">
-                <a class="tile" href="rc.html"><img src="{{ asset('uploads/imgcouv/' . $projet->imgcouv ) }}" alt="" />
+                <a class="tile" href="{{ URL::route('articles', $projet) }}"><img src="{{ asset('uploads/imgcouv/' . $projet->imgcouv ) }}" alt="" />
                     <div class="details">
                         <span class="title">{{ $projet->titre }}</span>
                         <span class="info">{{ $projet->type }}</span>
