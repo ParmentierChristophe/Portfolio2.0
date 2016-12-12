@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Administration Christophe-Parmentier.fr</title>
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3-theme-deep-orange.css">

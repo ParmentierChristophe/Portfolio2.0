@@ -6,22 +6,16 @@
 <div class="login-page">
     <div class="form">
         {!! Form::open(array('route' => 'handleLogin'), array('class' => 'login-form')) !!}
-{{--        <form class="login-form">--}}
         {!! Form::text('email', null , ['class' =>'', 'placeholder'=>'Email' ]) !!}
 
-{{--
-        <input type="text" placeholder="username"/>
---}}
+
         {!! Form::password('password', ['class' =>'', 'placeholder'=>'Password' ]) !!}
 
-{{--
-        <input type="password" placeholder="password"/>
---}}
         {!! Form::token() !!}
             <button type="submit">login</button>
-{{--        </form>--}}
-        {!! Form::close() !!}
 
+        {!! Form::close() !!}
+    <p class="plog">Retourner à la <a class="linklog" href="{{ url('/') }}">page d'accueil</a></p>
     </div>
 </div>
 @stop

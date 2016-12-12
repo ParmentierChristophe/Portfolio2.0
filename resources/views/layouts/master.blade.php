@@ -8,9 +8,11 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+{{--
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
+--}}
     <!-- Place favicon.ico in the root directory -->
-    <link rel="icon" href="favicon.ico">
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
 
     <link href="https://fonts.googleapis.com/css?family=Dosis:400,700,800" rel="stylesheet">
     <link rel="stylesheet" href="{{ URL::asset('css/normalize.css') }}">
