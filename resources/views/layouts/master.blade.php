@@ -75,9 +75,9 @@
 <script src="{{ URL::asset('js/plugins.js') }}"></script>
 <script src="{{ URL::asset('js/main.js') }}"></script>
 <script type="text/javascript">
-    $(document).ready(function() {
-        $("body").css("display", "none");
-    });
+    /*    $(document).ready(function() {
+     $("body").css("display", "none");
+     });*/
 </script>
 
 

@@ -2,97 +2,41 @@
 
 namespace App\Http\Controllers;
 
-use App\Contact;
-
+use App\Http\Requests\ContactRequest;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\Contact;
 use Illuminate\Http\Request;
 
-class ContactController extends Controller
-{
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        return view('portfolio.about');
-    }
+class ContactController extends Controller {
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $requests)
-    {
-        $msg = new Contact;
-
-        $msg->contactname = $requests->contactname;
-        $msg->contactemail = $requests->contactemail;
-        $msg->contacttext = $requests->contacttext;
-
-        $msg->save();
-        if ($msg) {
-            return view('portfolio.about');
-
-        }
+	/**
+	 * Show the form for creating a new resource.
+	 *
+	 * @return \Illuminate\Http\Response
+	 */
+	public function create() {
+		return view( 'portfolio.about' );
 
 
-    }
+	}
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
+	/**
+	 * Store a newly created resource in storage.
+	 *
+	 * @param  \Illuminate\Http\Request $request
+	 *
+	 * @return \Illuminate\Http\Response
+	 */
+	public
+	function store(
+		ContactRequest $request
+	) {
+		Mail::to( 'itof2addictwear@gmail.com' )
+		    ->send( new Contact( $request->except( '_token' ) ) );
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
+		return view( 'portfolio.confirm' );
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
+	}
+
 }
