@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Christophe Parmentier / Freelance, Graphic Designer / Illustration</title>
-    <meta name="description" content="">
+    <meta name="description"
+          content="C'EST LE PORTFOLIO DE CRISPY, FREELANCE GRAPHIC DESIGNER ¬ DÉVELOPPEUR À LILLE.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 {{--    <link rel="apple-touch-icon" href="apple-touch-icon.png">--}}
@@ -88,7 +89,7 @@
         e.src = 'https://www.google-analytics.com/analytics.js';
         r.parentNode.insertBefore(e, r)
     }(window, document, 'script', 'ga'));
-    ga('create', 'UA-XXXXX-X', 'auto');
+    ga('create', 'UA-85002883-1', 'auto');
     ga('send', 'pageview');
 </script>
 </body>

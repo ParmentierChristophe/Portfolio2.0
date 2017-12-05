@@ -5,13 +5,13 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Christophe Parmentier / Freelance, Graphic Designer / Illustration</title>
-    <meta name="description" content="">
+    <meta name="description" content="C'EST LE PORTFOLIO DE CRISPY, FREELANCE GRAPHIC DESIGNER ¬ DÉVELOPPEUR À LILLE.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 {{--
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 --}}
-    <!-- Place favicon.ico in the root directory -->
+<!-- Place favicon.ico in the root directory -->
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
 
     <link href="https://fonts.googleapis.com/css?family=Dosis:400,700,800" rel="stylesheet">
@@ -26,14 +26,14 @@
 <body>
 
 <!--[if lt IE 8]>
-<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
 <![endif]-->
 
 <!-- Add your site or application content here -->
 
 <!-- Back to top -->
-<a href="#" id="back-to-top" title="Back to top"><img src="img/top2.png" alt="" /></a>
-
+<a href="#" id="back-to-top" title="Back to top"><img src="img/top2.png" alt=""/></a>
 
 
 <!-- Hamburger Style ! -->
@@ -63,8 +63,6 @@
 @include('layouts/partials/_footerport')
 
 
-
-
 <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 <script src="masonry.pkgd.min.js" type="text/javascript"></script>
 <script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
@@ -81,24 +79,21 @@
 </script>
 
 
-
-
-
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>
-    (function(b, o, i, l, e, r) {
+    (function (b, o, i, l, e, r) {
         b.GoogleAnalyticsObject = l;
         b[l] || (b[l] =
-                function() {
-                    (b[l].q = b[l].q || []).push(arguments)
-                });
+            function () {
+                (b[l].q = b[l].q || []).push(arguments)
+            });
         b[l].l = +new Date;
         e = o.createElement(i);
         r = o.getElementsByTagName(i)[0];
         e.src = 'https://www.google-analytics.com/analytics.js';
         r.parentNode.insertBefore(e, r)
     }(window, document, 'script', 'ga'));
-    ga('create', 'UA-XXXXX-X', 'auto');
+    ga('create', 'UA-85002883-1', 'auto');
     ga('send', 'pageview');
 </script>
 </body>

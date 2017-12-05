@@ -6,33 +6,31 @@ use App\User;
 
 class DatabaseSeeder extends Seeder {
 
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
-    public function run()
-    {
+	/**
+	 * Run the database seeds.
+	 *
+	 * @return void
+	 */
+	public function run() {
 
-        // $this->call('UserTableSeeder');
-        $this->call('UsersTableSeeder');
-    }
+		// $this->call('UserTableSeeder');
+		$this->call( 'UsersTableSeeder' );
+	}
 
 }
 
 
 class UsersTableSeeder extends Seeder {
 
-    public function run()
-    {
-        DB::table('users')->delete();
+	public function run() {
+		DB::table( 'users' )->delete();
 
-        User::create([
-            'name' => 'Christophe',
-            'email' => 'christophe-parmentier@laposte.net',
-            'password' => bcrypt('123456')
-        ]);
+		User::create( [
+			'name'     => 'Admin',
+			'email'    => 'admin@test.com',
+			'password' => bcrypt( '123456' )
+		] );
 
-    }
+	}
 
 }
